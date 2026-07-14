@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    font-family:Arial,sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e3a8a
+    );
+
+    color:white;
+}
+
+
+
+
+
+/* =========================================
+   TITRE
+========================================= */
+
+h1{
+
+    font-size:42px;
+
+    color:#38bdf8;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 15px rgba(56,189,248,0.5);
+}
+
+
+
+
+
+/* =========================================
+   TEXTE LEÇON
+========================================= */
+
+p{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    line-height:2;
+
+    font-size:20px;
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* =========================================
+   MOTS IMPORTANTS
+========================================= */
+
+strong{
+
+    color:#ff79c6;
+}
+
+
+
+
+
+/* =========================================
+   VIES
+========================================= */
+
+#vies{
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#ff5ca8;
+
+    text-shadow:
+    0 0 10px rgba(255,92,168,0.5);
+}
+
+
+
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+#quiz{
+
+    margin-top:30px;
+}
+
+
+
+
+
+/* =========================================
+   CARTE QUESTION
+========================================= */
+
+.quiz-card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    margin-bottom:30px;
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.08);
+
+    transition:0.3s;
+}
+
+
+
+.quiz-card:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,0.3);
+}
+
+
+
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.quiz-question{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    color:white;
+}
+
+
+
+
+
+/* =========================================
+   BOUTONS QUIZ
+========================================= */
+
+.quiz-btn{
+
+    width:30%;
+
+    padding:16px;
+
+    margin-top:12px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+
+.quiz-btn:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,0.5);
+}
+
+
+
+
+
+/* =========================================
+   BONNE REPONSE
+========================================= */
+
+.correct{
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #00ff99
+    ) !important;
+}
+
+
+
+
+
+/* =========================================
+   MAUVAISE REPONSE
+========================================= */
+
+.wrong{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff1744,
+        #ff4d6d
+    ) !important;
+}
+
+
+
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#38bdf8;
+
+    border-radius:20px;
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+}
+button{
+    
+    border-radius: 8px;
+    background: 
+    linear-gradient(45deg,#38bdf8);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+    padding: 10px;
+    margin: 20px;
+    transition: 0,2s;
+}
+button:hover{
+   
+    
+    transform: scale(1,1);
+    box-shadow: 0 5px 10px rgba(56,189,248,0.5);
+
+ 
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="afficherVies();afficherQuiz(quizlecon6,'quiz')">
+    <h1>leçon 6: representation des lettres en octets</h1>
+    <br><br>
+    <p> 
+   dernierement on appris à representer les nombres en langage binaire , maintenant passons aux lettres. <br>
+   representer les lettres en binaires nous permet de parler en langage machine <br>
+   pour y parvenir nous utilisons trois nombres:12 , 13 et 14 <br>
+   12 represente les lettres compris dans l'intervalle  allant de la lettre A à la lettre I <br>
+   13 represente les lettres compris  dans l'intervalle allant de la lettre J à la lettre R <br>
+   14 represente les lettres compris dans l'intervalle allant de la lettre S à la lettre Z <br>
+   <br>
+   pour le transcrire en langage binaire il faut: <br>
+   
+   -ecrire en premier le nombre qui represente la lettre demandée en langage binaire. <br>
+   exemple:bill, la première lettre B correspond au nombre 12=1100 ,la deuxième lettre I correspond à 12=1100 , la troisième lettre L correspond à 13=1101 et la dernière lettre L correspond à 13=1101 <br>
+   -ensuite ecrire le numéro d'ordre de la lettre en binaire . <br>
+    exemple:bill,la lettre B correspond a la 2e=0010 lettre suivant l'intervalle de A à I ,la lettre I correspond à la 9e=1001 lettre suivant l'intervalle de A à I,la lettre L correspond à la 3e=0011 suivant l'intervalle de J à R  <br>
+   -ecrire respectiment le nombre qui represente la lettre et son numéro d'ordre côte à côte selon chaque lettre. <br>
+   exemple: bill , 1100 0010 1100 1001 1101 0011 1101 0011 <br>
+   maintenant vous ecrivez en langage machine <br>
+  <strong>Attention!</strong> à la lettre S , son numéro d'ordre est le 2 et non le 1
+</p>
+  <div id="vies"></div>
+  <div id="quiz"></div>
+  <p>
+    Vous avez terminé votre apprentissage ! 🎉
+  </p>
+  <button onclick="window.location.href='../bienvenue/deconnexion.html'">Deconnexion</button>
+<script src="mars.js"></script>
+ 
+</body>
+</html>

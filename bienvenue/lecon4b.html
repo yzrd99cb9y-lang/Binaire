@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    font-family:Arial,sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e3a8a
+    );
+
+    color:white;
+}
+
+
+
+
+
+/* =========================================
+   TITRE
+========================================= */
+
+h1{
+
+    font-size:42px;
+
+    color:#38bdf8;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 15px rgba(56,189,248,0.5);
+}
+
+
+
+
+
+/* =========================================
+   TEXTE LEÇON
+========================================= */
+
+p{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    line-height:2;
+
+    font-size:20px;
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* =========================================
+   MOTS IMPORTANTS
+========================================= */
+
+strong{
+
+    color:#ff79c6;
+}
+
+
+
+
+
+/* =========================================
+   VIES
+========================================= */
+
+#vies{
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#ff5ca8;
+
+    text-shadow:
+    0 0 10px rgba(255,92,168,0.5);
+}
+
+
+
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+#quiz{
+
+    margin-top:30px;
+}
+
+
+
+
+
+/* =========================================
+   CARTE QUESTION
+========================================= */
+
+.quiz-card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    margin-bottom:30px;
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.08);
+
+    transition:0.3s;
+}
+
+
+
+.quiz-card:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,0.3);
+}
+
+
+
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.quiz-question{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    color:white;
+}
+
+
+
+
+
+/* =========================================
+   BOUTONS QUIZ
+========================================= */
+
+.quiz-btn{
+
+    width:15%;
+
+    padding:16px;
+
+    margin-top:12px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+
+.quiz-btn:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,0.5);
+}
+
+
+
+
+
+/* =========================================
+   BONNE REPONSE
+========================================= */
+
+.correct{
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #00ff99
+    ) !important;
+}
+
+
+
+
+
+/* =========================================
+   MAUVAISE REPONSE
+========================================= */
+
+.wrong{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff1744,
+        #ff4d6d
+    ) !important;
+}
+
+
+
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#38bdf8;
+
+    border-radius:20px;
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+} 
+button{
+    
+    border-radius: 8px;
+    background: 
+    linear-gradient(45deg,#38bdf8);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+    padding: 10px;
+    margin: 20px;
+    transition: 0,2s;
+}
+button:hover{
+    
+    
+    transform: scale(1,1);
+    box-shadow: 0 5px 10px rgba(56,189,248,0.5);
+
+
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="afficherVies();afficherQuiz(quizlecon3b,'quiz')">
+    <h1>passer de la base2 à la base 8 </h1>
+    <br><br>
+    <p>pour passer de la base 2 à la base 8:c'est une petite astuce pour ne pas perdre son temps à diviser
+   il faut:
+   <br>
+   -compter 3 rang après chaque nombre en commencant de droite à gauche <br>
+   exemple:101110 en base2=...en base8 ,comptons 3 rang après chaque nombre de droite à gauche ,à droite nous aurons 110 et à gauche 101 <br>
+   -ensuite répèter le procèder avec les indices pour chaque rang de 3 <br>
+   exemple:101110 en base2=... <br>
+   en base 8, à droite nous avons 110 <br>
+   d'où avec le procèder sur les indices (2<sup>2</sup>x1)+(2<sup>1</sup>x1)+(2<sup>0</sup>x0)=6 et à gauche nous avons 1010 <br>
+   d'où avec le procèder sur les indices (2<sup>2</sup>x1)+(2<sup>1</sup>x0)+(2<sup>0</sup>x1)=5 <br>
+   -puis vous ecrivez la reponse selon l'ordre initial de gauche à droite <br>
+   exemple:101110 en base 2=...en base8,à droite on a 6 et a gauche on a 5 ,selon l'ordre initial nous aurons 56 <br>
+   donc la réponse vaut 56 ,101110 en base 2= 56 en base8
+ </p>
+ <div id="vies"></div>
+  <div id="quiz"></div>
+  <button onclick="window.location.href='../bienvenue/lecon4c.html'">
+        leçon suivante
+    </button>
+    <button onclick="window.location.href='../bienvenue/deconnexion.html'">Deconnexion</button>
+<script src="mars.js"></script>
+ 
+</body>
+</html>

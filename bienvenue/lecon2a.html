@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    font-family:Arial,sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e3a8a
+    );
+
+    color:white;
+}
+
+
+
+
+
+/* =========================================
+   TITRE
+========================================= */
+
+h1{
+
+    font-size:42px;
+
+    color:#38bdf8;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 15px rgba(56,189,248,0.5);
+}
+
+
+
+
+
+/* =========================================
+   TEXTE LEÇON
+========================================= */
+
+p{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:20px;
+    margin: 20px;
+    border-radius:25px;
+
+    line-height:2;
+
+    font-size:20px;
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* =========================================
+   MOTS IMPORTANTS
+========================================= */
+
+strong{
+
+    color:#ff79c6;
+}
+
+
+
+
+
+/* =========================================
+   VIES
+========================================= */
+
+#vies{
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#ff5ca8;
+
+    text-shadow:
+    0 0 10px rgba(255,92,168,0.5);
+}
+
+
+
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+#quiz{
+
+    margin-top:0px;
+}
+
+
+
+
+
+/* =========================================
+   CARTE QUESTION
+========================================= */
+
+.quiz-card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin-bottom:10px;
+
+    backdrop-filter:blur(10px);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.08);
+
+    transition:0.3s;
+}
+
+
+
+.quiz-card:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,0.3);
+}
+
+
+
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.quiz-question{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    color:white;
+}
+
+
+
+
+
+/* =========================================
+   BOUTONS QUIZ
+========================================= */
+
+.quiz-btn{
+
+    width:15%;
+
+    padding:16px;
+
+    margin-top:12px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+
+.quiz-btn:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,0.5);
+}
+
+
+
+
+
+/* =========================================
+   BONNE REPONSE
+========================================= */
+
+.correct{
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #00ff99
+    ) !important;
+}
+
+
+
+
+
+/* =========================================
+   MAUVAISE REPONSE
+========================================= */
+
+.wrong{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff1744,
+        #ff4d6d
+    ) !important;
+}
+
+
+
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#38bdf8;
+
+    border-radius:20px;
+}
+
+
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+}
+button{
+    border-radius: 8px;
+    background: 
+    linear-gradient(45deg,#38bdf8);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 20%;
+    padding: 10px;
+    margin: 20px;
+    transition: 0,2s;}
+button:hover{
+    
+    transform: scale(1,1);
+    box-shadow: 0 5px 10px rgba(56,189,248,0.5);
+
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="afficherVies(); afficherQuiz(quizlecon2a,'quiz')">
+    <h1>leçon 2: le système de numeration</h1>
+    <p>définition:
+    <br><br>
+    un système de numeration est un ensemble d'ecritures servant à representer le nombre d'ensemble donne en usage de chiffres <br>
+    ce système nous permet de convertir les nombres decimaux , de passer d'une base à une autre et d'effectuer des calculs dans les différentes bases
+    <br><br>
+    quelques système de numeration:
+    le système de numeration decimal,le système de numeration positionner en base 2 ou encore le système binaire,le système de numeration positionner en base 8 ou encore le système octal et le système de numeration positionner en base 16 ou encore le système hexadecimal <br>   
+    1.le système decimal:il utilise 10 chiffres de 0 à 9 pour representer le nombre entier et le nombre decimal <br>
+    chaque position correspond à une puissance de 10 on commence toujours par 10<sup>0</sup> ensuite 10<sup>1</sup>,10<sup>2</sup>,... <br>
+   </p>
+   <p>
+    exemple: <strong>20</strong> en base <strong>10</strong>= <strong>0x10<sup>0</sup>+2x10<sup>1</sup></strong>,<strong>0x1+2x10</strong>,<strong>0</strong>+<strong>20</strong>=<strong>20</strong><br>
+    <strong>donc 20 en base 10 donne 20
+   </strong>
+   </p>
+  <div id="vies"></div>
+  <div id="quiz"></div>
+  <button onclick="window.location.href='../bienvenue/lecon2b.html'">
+        leçon suivante
+    </button>
+   <button onclick="window.location.href='../bienvenue/deconnexion.html'">Deconnexion</button> 
+<script src="mars.js"></script>
+ 
+</body>
+    
+</html>

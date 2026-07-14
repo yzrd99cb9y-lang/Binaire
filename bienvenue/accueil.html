@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+ <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    font-family:Arial,sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1e3a8a
+    );
+
+    color:white;
+}
+
+
+
+/* ==========================
+   CONTENEUR
+========================== */
+
+.container{
+
+    text-align:center;
+
+    z-index:10;
+
+    max-width:800px;
+
+    padding:40px;
+}
+
+
+
+/* ==========================
+   CODE BINAIRE
+========================== */
+
+.binary-code{
+
+    color:#38bdf8;
+    
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+    opacity:0.5;
+}
+
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+    font-size:90px;
+
+    font-weight:bold;
+
+    letter-spacing:10px;
+
+    color:white;
+  ;
+
+    text-shadow:
+        0 0 10px #38bdf8,
+        0 0 20px #38bdf8,
+        0 0 40px #38bdf8,
+        0 0 80px #38bdf8;
+
+    animation: glow 2s infinite alternate;
+}
+
+
+
+@keyframes glow{
+
+    from{
+
+        transform:scale(1);
+        
+    }
+
+    to{
+
+        transform:scale(1.05);
+        
+
+    
+    }
+}
+
+
+
+/* ==========================
+   DESCRIPTION
+========================== */
+
+.description{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#cbd5e1;
+}
+
+
+
+/* ==========================
+   BOUTON
+========================== */
+
+button{
+
+    margin-top:40px;
+
+    padding:18px 35px;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    transition:0.3s;
+    
+}
+
+
+
+button:hover{
+    
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 25px rgba(56,189,248,0.7);
+    
+}
+
+
+
+/* ==========================
+   FOND BINAIRE
+========================== */
+
+.binary-background{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    top:0;
+
+    left:0;
+}
+
+
+
+.binary-background span{
+
+    position:absolute;
+
+    color:rgba(255,255,255,0.08);
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    animation: float 12s  infinite alternate;
+}
+
+
+
+.binary-background span:nth-child(1){
+
+    left:10%;
+    top:10%;
+    
+}
+
+.binary-background span:nth-child(2){
+
+    left:80%;
+    top:15%;
+}
+
+.binary-background span:nth-child(3){
+
+    left:20%;
+    top:70%;
+}
+
+.binary-background span:nth-child(4){
+
+    left:75%;
+    top:80%;
+}
+
+.binary-background span:nth-child(5){
+
+    left:45%;
+    top:20%;
+}
+
+.binary-background span:nth-child(6){
+
+    left:55%;
+    top:65%;
+}
+
+
+
+@keyframes float{
+
+    0%{
+
+        transform:
+        translateY(0px);
+    }
+
+    50%{
+
+        transform:
+        translateY(-25px);
+    }
+
+    100%{
+
+        transform:
+        translateY(0px);
+    }
+}
+ </style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Binary</title>
+
+    <link rel="stylesheet" href="accueil.css">
+
+</head>
+
+<body>
+
+    <div class="binary-background">
+
+        <span>010101</span>
+        <span>101010</span>
+        <span>001101</span>
+        <span>110011</span>
+        <span>101101</span>
+        <span>010110</span>
+
+    </div>
+
+    <div class="container">
+
+        <p class="binary-code">
+
+            01000010 01001001 01001110
+            01000001 01010010 01011001
+
+        </p>
+
+        <h1 class="logo">
+
+            BINARY
+
+        </h1>
+
+        <p class="description">
+
+            Découvrez le monde du langage machine et apprenez
+            à maîtriser le système binaire étape par étape.
+
+        </p>
+
+        <button
+        onclick="window.location.href='../Bienvenue/bienvenue.html'">
+
+            Commencer l'aventure →
+
+        </button>
+
+    </div>
+
+</body>
+
+</html>

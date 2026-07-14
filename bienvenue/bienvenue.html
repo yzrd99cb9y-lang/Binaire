@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+  body{
+
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:white;
+    display:flex;
+}
+
+
+/* BARRE LATÉRALE */
+
+.sidebar{
+
+    width:260px;
+    height:100vh;
+    background:#111827;
+
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    overflow-y:auto ;
+
+    
+
+}
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#38bdf8;
+
+    border-radius:20px;
+}
+
+
+
+::-webkit-scrollbar-track:hover{
+
+    background:#111827;
+
+}
+
+
+
+.sidebar h2{
+
+    margin-bottom:25px;
+    color:#96d3ed;
+    
+    
+}
+
+
+.sidebar a{
+
+    text-decoration:none;
+    color:white;
+
+    padding:30px;
+    
+    color:#96d3ed;
+
+    margin-bottom:20px;
+
+    border-radius:25px;
+
+    background:#1e293b;
+
+    transition:0.3s;
+    
+    
+}
+
+
+.sidebar a:hover{
+
+    background:#2563eb;
+
+    transform:translateX(-5px);
+}
+
+
+
+/* CONTENU */
+
+.main{
+
+    flex:1;
+    
+    
+
+    padding:40px;
+}
+
+
+.card{
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:25px;
+    color:#96d3ed;
+    margin-top:30px;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+#user{
+    color:#96d3ed;   
+}
+h1{
+   color:#96d3ed;
+
+}
+
+
+    </style>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body onload="afficherNomUtilisateur()">
+    
+<div class="sidebar">
+
+    <h2>Mes Leçons</h2>
+
+    <a href="lecon1.html">une bit et un mot</a>
+    <a href="lecon2a.html">le système de numération</a>
+    <a href="lecon2b.html">le système binaire</a>
+    <a href="lecon2c.html">la représentation des chiffres binaire</a>
+    <a href="lecon2d.html">le système octal</a>
+    <a href="lecon2e.html">le système hexadecimal </a>
+    <a href="lecon3a.html">conversions binaires</a>
+    <a href="lecon3b.html">passer de la base 10 à une autre</a>
+    <a href="lecon4a.html">conversions binaires</a>
+    <a href="lecon4b.html">passer de la base 2 à la base 8</a>
+    <a href="lecon4c.html">passer de la base 2 à la base 16</a>
+    <a href="lecon5a.html">les mots memoires</a>
+    <a href="lecon5b.html">écritures binaires</a>
+    <a href="lecon6.html">représentation des lettres en octets</a>
+
+</div>
+
+
+<div class="main">
+
+    <h1 id="user">
+        Bienvenue !😊👐
+    </h1>
+
+    <div class="card">
+
+        <h2>
+            Commence ton apprentissage
+        </h2>
+
+        <p>
+            Choisis une leçon dans le menu de gauche.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="mars.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+body{
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Arial, sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e3a8a
+    );
+}
+
+
+
+/* CARTE */
+
+.container{
+
+    width:420px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:
+    rgba(30,41,59,0.75);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,0.4);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    animation:
+    apparition 1s ease;
+}
+
+
+
+/* TITRE */
+
+h2{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+    letter-spacing:1px;
+}
+
+
+
+/* LABEL */
+
+label{
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    display:block;
+
+    margin-bottom:10px;
+
+    margin-top:20px;
+}
+
+
+
+/* INPUT */
+
+input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    outline: none;
+
+    font-size:16px;
+
+    background:#f8fafc;
+
+    transition:0.3s;
+}
+
+
+input:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:
+    0 0 15px #3b82f6;
+}
+
+
+
+/* BOUTON */
+
+button{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 20px #38bdf8;
+}
+
+
+
+/* TEXTE */
+
+p{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#cbd5e1;
+
+    font-size:16px;
+}
+
+
+
+/* LIEN */
+
+a{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+
+a:hover{
+
+    text-decoration:underline;
+}
+
+
+
+/* ANIMATION */
+
+@keyframes apparition{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Connexion</h2>
+
+    <form>
+
+        <label>
+            Nom d'utilisateur
+        </label>
+
+        <input
+        type="text"
+        id="username"
+        placeholder="Entre ton nom">
+
+
+
+
+        <label>
+            Mot de passe
+        </label>
+
+        <input
+        type="password"
+        id="password"
+        placeholder="Entre ton mot de passe">
+
+
+
+        <button
+        type="button"
+        onclick="connecterUtilisateur()">
+
+        Se connecter
+
+        </button>
+    
+
+    </form>
+
+
+    <p>
+
+        Pas encore de compte ?
+
+        <a href="sinscrire.html">
+
+            Créer un compte
+
+        </a>
+
+
+    </p>
+
+</div>
+
+<script src="mars.js"></script>
+
+</body>
+</html>
